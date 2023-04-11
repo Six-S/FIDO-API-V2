@@ -11,11 +11,23 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.projectlombok:lombok:1.18.26'
+    implementation("io.micronaut:micronaut-management")
+    annotationProcessor("org.projectlombok:lombok")
+    annotationProcessor("io.micronaut.data:micronaut-data-processor")
     annotationProcessor("io.micronaut:micronaut-http-validation")
     implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut:micronaut-jackson-databind")
+    implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
+    implementation("io.micronaut.sql:micronaut-jdbc-hikari")
     implementation("jakarta.annotation:jakarta.annotation-api")
+    compileOnly("org.projectlombok:lombok")
     runtimeOnly("ch.qos.logback:logback-classic")
+    runtimeOnly("org.postgresql:postgresql")
+    testImplementation("org.assertj:assertj-core")
+    testImplementation("org.testcontainers:junit-jupiter")
+    testImplementation("org.testcontainers:postgresql")
+    testImplementation("org.testcontainers:testcontainers")
     implementation("io.micronaut:micronaut-validation")
 
 }
