@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 public class Application {
 
     public static void main(String[] args) {
+        System.out.println("This is a test... Can I see this string?");
         Micronaut.run(Application.class, args);
     }
 }
